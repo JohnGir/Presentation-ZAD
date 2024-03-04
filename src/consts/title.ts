@@ -1,4 +1,4 @@
 import { ref } from "vue";
 
-export const ctitle = ref("Nos diplômes nous ouvrent-il les portes de l’emploi ?");
+export const ctitle = ref("Africain, riche et philantrope");
 const logo = "logo.png";

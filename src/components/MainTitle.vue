@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'MainTitle',
+  name: "MainTitle",
   props: {
     title: {
       type: String,
@@ -35,14 +35,13 @@ export default defineComponent({
 
 <style scoped>
 @font-face {
-  font-family: 'Canal';
-  src: local('Canal'),
-    url(../assets/Canal-DINNextLTPro-BoldCond.ttf) format('truetype');
+  font-family: "Canal";
+  src: local("Canal"),
+    url(../assets/Canal-DINNextLTPro-BoldCond.ttf) format("truetype");
 }
 
 .mtitle {
-  font-family: 'Canal', Helvetica, Arial;
+  font-family: "Canal", Helvetica, Arial;
   font-size: 70px;
-  text-align: center;
 }
 </style>
