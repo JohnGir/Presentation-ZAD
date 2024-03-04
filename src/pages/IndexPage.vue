@@ -10,137 +10,125 @@
         arrows
         style="width: 95vw; height: 90vh"
         class="rounded-borders text-white transparent"
+       
+       
       >
+        
         <q-carousel-slide name="style" class="column no-wrap flex-center">
           <!--HOME-->
-          <main-title :title="ctitle" class="custom-title"></main-title>
-          <q-img
-            src="src/assets/icone RSE.webp"
-            style="height: 500px; width: 500px"
-          />
+          <main-title :title="ctitle" icon="fa-solid fa-gem" class="custom-title"></main-title>
         </q-carousel-slide>
 
-        <q-carousel-slide name="S2" class="column no-wrap flex-center">
+        <q-carousel-slide name="q1" class="column no-wrap flex-center">
           <h1 class="mtitle">
-            <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Aliko
-            Dangote
-          </h1>
-          <div class="grid-container">
-            <div class="grid-item content">
-              <q-img
-                src="src/assets/aliko dangote.webp"
-                basic
-                style="
-                  width: 600px;
-                  height: auto;
-                  border: 2px solid white;
-                  border-radius: 10px;
-                "
-              />
-            </div>
-            <p style="font-size: 70px">
-              $ 1,25 milliards de dollars dans la fondation
-            </p>
-          </div>
-        </q-carousel-slide>
-
-        <q-carousel-slide name="S3" class="column no-wrap flex-center">
-          <h1 class="mtitle">
-            <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Mo Ibrahim
+            <q-icon name="fa-solid fa-gem" /> &nbsp;Le quizz
           </h1>
           <q-img
-            src="src/assets/mo ibrahim.jpeg"
+            src="src/assets/brieflogosemissionluxe/gucci.png"
             basic
-            style="
-              width: 600px;
-              height: auto;
-              border: 2px solid white;
-              border-radius: 10px;
-            "
+            style="width: 25%; height: auto"
           />
         </q-carousel-slide>
 
-        <q-carousel-slide name="S4" class="column no-wrap flex-center">
+        <q-carousel-slide name="q2" class="column no-wrap flex-center">
           <h1 class="mtitle">
-            <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Les
-            philantropes
-          </h1>
-          <p style="font-size: 45px">
-            Depuis 2014, les philantropes africains ont alloués entre
-          </p>
-          <b></b>
-          <p style="font-size: 35px">7 et 10 milliards de dollars</p>
-        </q-carousel-slide>
-
-        <q-carousel-slide name="S5" class="column no-wrap flex-center">
-          <h1 class="mtitle">
-            <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp; Tony
-            Elumelu
+            <q-icon name="fa-solid fa-gem" /> &nbsp;Le quizz
           </h1>
           <q-img
-            src="src/assets/tony elumelu.jpeg"
+            src="src/assets/brieflogosemissionluxe/vuitton.png"
             basic
-            style="
-              width: 700px;
-              height: auto;
-              border: 2px solid white;
-              border-radius: 10px;
-            "
+            style="width: 25%; height: auto"
           />
         </q-carousel-slide>
 
-        <q-carousel-slide name="S6" class="column no-wrap flex-center">
+        <q-carousel-slide name="q3" class="column no-wrap flex-center">
           <h1 class="mtitle">
-            <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Tony Elumelu
+            <q-icon name="fa-solid fa-gem" /> &nbsp;Le quizz
           </h1>
           <q-img
-            src="src/assets/Tonyfoundation.png"
+            src="src/assets/brieflogosemissionluxe/dior.png"
             basic
-            style="
-              width: 1500px;
-              height: auto;
-              border: 2px solid white;
-              border-radius: 10px;
-            "
+            style="width: 25%; height: auto"
           />
         </q-carousel-slide>
 
-        <q-carousel-slide name="S7" class="column no-wrap flex-center">
+        <q-carousel-slide name="q4" class="column no-wrap flex-center">
           <h1 class="mtitle">
-            <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Bilan de la
-            fondation Tony Elumelu après 10 ans
+            <q-icon name="fa-solid fa-gem" /> &nbsp;Le quizz
           </h1>
-          <div class="custom-grid-container">
-            <div class="custom-grid-item">
-              <q-icon name="fa-solid fa-coins" size="3em" color="yellow" />
-              <p style="font-size: 35px">Investissement sur le continent</p>
-            </div>
-            <div class="custom-grid-item">
-              <q-icon name="fas fa-dollar-sign" size="3em" color="green" />
-              <p style="font-size: 35px">
-                Avec 100 millions de dollars misés sur le continent
-              </p>
-            </div>
-            <div class="custom-grid-item">
-              <q-icon name="fas fa-lightbulb" size="3em" color="yellow" />
-              <p style="font-size: 35px">
-                18,000 projets d'entrepreneurs financés
-              </p>
-            </div>
-            <div class="custom-grid-item">
-              <q-icon name="fas fa-users" size="3em" />
-              <p style="font-size: 35px">400,000 emplois créés</p>
-            </div>
-          </div>
+          <q-img
+            src="src/assets/brieflogosemissionluxe/chanel.png"
+            basic
+            style="width: 25%; height: auto"
+          />
         </q-carousel-slide>
 
+        <q-carousel-slide name="q5" class="column no-wrap flex-center">
+          <h1 class="mtitle">
+            <q-icon name="fa-solid fa-gem" /> &nbsp;Le quizz
+          </h1>
+          <q-img
+            src="src/assets/brieflogosemissionluxe/polo ralph lauren.png"
+            basic
+            style="width: 25%; height: auto"
+          />
+        </q-carousel-slide>
+
+        <q-carousel-slide name="loved brand" class="column no-wrap flex-center">
+          <h1 class="mtitle">
+            <q-icon name="fa-solid fa-gem" /> &nbsp; Marques préférées sur le
+            continent
+          </h1>
+          <charts-view :data="brand" cwidth="1000px;"></charts-view>
+        </q-carousel-slide>
+
+        <q-carousel-slide
+          name="worlMap-gucci"
+          class="column no-wrap flex-center"
+        >
+          <h1 class="mtitle">
+            <q-icon name="fa-solid fa-gem" /> &nbsp; Magasins Gucci
+          </h1>
+          <my-leaflet-map ref="leafletMap" cwidth="1000px;"></my-leaflet-map>
+        </q-carousel-slide>
+
+         <q-carousel-slide
+          name="worlMap-vuitton"
+          class="column no-wrap flex-center"
+        >
+          <h1 class="mtitle">
+            <q-icon name="fa-solid fa-gem" /> &nbsp; Magasins Louis Vuitton
+          </h1>
+          <q-img src="src/assets/Maroc 2 (1).jpg" ></q-img>
+         </q-carousel-slide>
+
+        <q-carousel-slide name="partLuxe" class="column no-wrap flex-center">
+          <h1 class="mtitle">
+            <q-icon name="fa-solid fa-gem" />&nbsp;Part de l’Afrique de le
+            marché mondial du luxe en 2022
+          </h1>
+          <charts-view :data="luxe" cwidth="1000px;"></charts-view>
+        </q-carousel-slide>
+
+        <q-carousel-slide name="moneyE" class="column no-wrap flex-center">
+          <h1 class="mtitle">
+            <q-avatar> </q-avatar>
+            <q-icon name="fa-solid fa-gem" />
+            &nbsp;Part d’exportation de Champagne vers Afrique en 2019
+          </h1>
+          <dyn-counter :value="1.8" unit="%" :round="10"></dyn-counter>
+        </q-carousel-slide>
+
+        <q-carousel-slide name="licornes4" class="q-mx-auto q-my-4">
+          <h4 >
+            <q-icon name="fa-solid fa-gem" /> &nbsp;Nombre de fortunes de plus
+            de 100 000 000 de dollars en Afrique sous titre
+          </h4>
+          <charts-view :data="nbrFort" :round="1"></charts-view>
+        </q-carousel-slide>
         <q-carousel-slide name="style" class="column no-wrap flex-center">
           <!--HOME-->
-          <q-avatar></q-avatar>
-          <main-title
-            :title="ctitle"
-            icon="fa-solid fa-hand-holding-dollar"
-          ></main-title>
+          <main-title :title="ctitle" icon="fa-solid fa-gem"></main-title>
         </q-carousel-slide>
       </q-carousel>
     </div>
@@ -148,17 +136,30 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted } from "vue";
 
-import MainTitle from '../components/MainTitle.vue';
-import { transparentize } from '../consts/Utils';
-import { ctitle } from 'src/consts/title';
-import { QAvatar } from 'quasar';
+import MainTitle from "../components/MainTitle.vue";
+import DynCounter from "../components/DynCounter.vue";
+import ChartsView from "src/components/ChartsView.vue";
+import { transparentize } from "../consts/Utils";
+import { ctitle } from "src/consts/title"
+import { QAvatar } from "quasar";
+import MyLeafletMap from "src/components/MyLeafletMap.vue";
 
-const slide = ref('style');
+
+
+
+const slide = ref("style")
+
+
+
+
+
 
 // Hook pour exécuter une action après le montage du composant
-onMounted(() => {});
+onMounted(() => {
+  
+});
 
 const brand = ref({
   type: 'bar',
@@ -214,6 +215,12 @@ const brand = ref({
   },
 });
 
+
+
+
+
+
+
 const nbrFort = ref({
   type: 'bar',
   data: {
@@ -243,8 +250,11 @@ const nbrFort = ref({
       display: true,
       text: '%',
     },
+    
   },
 });
+
+
 
 const luxe = ref({
   type: 'pie',
@@ -286,79 +296,33 @@ const luxe = ref({
     },
   },
 });
+
+
+
+
+
+
+
 </script>
 
 <style scoped>
 @font-face {
-  font-family: 'Canal';
-  src: local('Canal'),
-    url(../assets/Canal-DINNextLTPro-BoldCond.ttf) format('truetype');
+  font-family: "Canal";
+  src: local("Canal"),
+    url(../assets/Canal-DINNextLTPro-BoldCond.ttf) format("truetype");
 }
 
 .test1 {
-  font-family: 'Canal', Helvetica, Arial;
+  font-family: "Canal", Helvetica, Arial;
   font-size: 50px;
 }
 
 .mtitle {
-  font-family: 'Canal', Helvetica, Arial;
-  font-size: 100px;
-  text-align: center;
+  font-family: "Canal", Helvetica, Arial;
+  font-size: 30px;
 }
 
 .custom-title {
   font-size: 24px; /* Remplace cette valeur par celle que tu souhaites */
-}
-
-/* Slide 2 */
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px; /* Espace entre les cellules */
-}
-
-.grid-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.content {
-  text-align: center; /* Centrer le texte dans la cellule du contenu */
-}
-
-/* Slide 7 */
-
-.custom-grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 20px; /* Espace entre les cellules */
-}
-
-.custom-grid-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
-  border-radius: 10px;
-
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-}
-
-.custom-grid-item q-icon {
-  margin-bottom: 10px;
-}
-
-.custom-grid-item p {
-  font-size: 16px;
-  margin: 0;
 }
 </style>
