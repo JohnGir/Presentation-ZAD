@@ -1,4 +1,4 @@
 import { ref } from "vue";
 
-export const ctitle = ref("Place de l’Afrique sur le marché mondial du luxe");
+export const ctitle = ref("Couverture sanitaire universelle, où en es-t-on ?");
 const logo = "logo.png";

@@ -1,0 +1,51 @@
+/* Animation de rotation continue*/
+.rotate-continuous {
+  display: inline-block;
+  animation: rotateContinuous 2s linear infinite;
+}
+
+@keyframes rotateContinuous {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*Animation de déplacement vertical*/
+.move-up-down {
+  display: inline-block;
+  animation: moveUpDown 1s ease-in-out infinite alternate;
+}
+
+@keyframes moveUpDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
+
+/*Animation de changement de couleur*/
+.change-color {
+  color: blue;
+  transition: color 0.5s ease;
+}
+
+.change-color:hover {
+  color: red;
+}
+
+/*Animation de fade-in*/
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.fade-in:hover {
+  opacity: 1;
+}
+
