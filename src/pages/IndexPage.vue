@@ -15,163 +15,71 @@
           <!--HOME-->
           <main-title
             :title="ctitle"
-            icon="fa-regular fa-gem"
-            style="size: 2rem"
+            icon="fa-solid fa-graduation-cap"
             class="custom-title"
           ></main-title>
         </q-carousel-slide>
 
-        <q-carousel-slide name="q1" class="column no-wrap flex-center">
-          <h1 class="mtitle">
-            <q-icon name="fa-regular fa-gem" /> &nbsp;Le quizz
+        <q-carousel-slide name="S2" class="column no-wrap flex-center">
+          <h1 style="font-size: 50px">
+            <q-icon name="fa-solid fa-graduation-cap" /> &nbsp;1,5 millions de
+            diplômés sortis de l’enseignement supérieur en 2023 en Afrique
           </h1>
-          <q-img
-            src="src/assets/brieflogosemissionluxe/gucci.png"
-            basic
-            style="width: 30%; height: 45%"
-          />
         </q-carousel-slide>
 
-        <q-carousel-slide name="q2" class="column no-wrap flex-center">
-          <h1 class="mtitle">
-            <q-icon name="fa-regular fa-gem" /> &nbsp;Le quizz
+        <q-carousel-slide name="S3" class="column no-wrap flex-center">
+          <h1 style="font-size: 45px">
+            <q-icon name="fa-solid fa-graduation-cap" /> &nbsp;Répartition des
+            diplômés selon le domaine d’études au Burkina Faso en 2020
           </h1>
-          <q-img
-            src="src/assets/brieflogosemissionluxe/vuitton.png"
-            basic
-            style="width: 25%; height: 45%"
-          />
+          <charts-view :data="RptDiplome" cwidth="1300px"></charts-view>
         </q-carousel-slide>
 
-        <q-carousel-slide name="q3" class="column no-wrap flex-center">
-          <h1 class="mtitle">
-            <q-icon name="fa-regular fa-gem" /> &nbsp;Le quizz
-          </h1>
-          <q-img
-            src="src/assets/brieflogosemissionluxe/dior.png"
-            basic
-            style="width: 25%; height: 45%"
-          />
-        </q-carousel-slide>
-
-        <q-carousel-slide name="q4" class="column no-wrap flex-center">
-          <h1 class="mtitle">
-            <q-icon name="fa-regular fa-gem" /> &nbsp;Le quizz
-          </h1>
-          <q-img
-            src="src/assets/brieflogosemissionluxe/chanel.png"
-            basic
-            style="width: 25%; height: 45%"
-          />
-        </q-carousel-slide>
-
-        <q-carousel-slide name="q5" class="column no-wrap flex-center">
-          <h1 class="mtitle">
-            <q-icon name="fa-regular fa-gem" /> &nbsp;Le quizz
-          </h1>
-          <q-img
-            src="src/assets/brieflogosemissionluxe/polo ralph lauren.png"
-            basic
-            style="width: 25%; height: 45%"
-          />
-        </q-carousel-slide>
-
-        <q-carousel-slide name="loved brand" class="column no-wrap flex-center">
-          <h1 class="mtitle">
-            <q-icon name="fa-regular fa-gem" /> &nbsp; Marques préférées sur le
-            continent
-          </h1>
-          <charts-view :data="brand" cwidth="1000px;"></charts-view>
-        </q-carousel-slide>
-
-        <q-carousel-slide
-          name="worlMap-vuitton"
-          class="column no-wrap flex-center"
-        >
-          <h1 class="mtitle">
-            <q-icon name="fa-regular fa-gem" /> &nbsp; Magasins Gucci
-          </h1>
-          <q-img src="src/assets/4.jpg" />
-        </q-carousel-slide>
-
-        <q-carousel-slide
-          name="worlMap-vuitton-2"
-          class="column no-wrap flex-center"
-        >
-          <h1 class="mtitle">
-            <q-icon name="fa-regular fa-gem" /> &nbsp; Magasins Gucci
-          </h1>
-          <q-img src="src/assets/5.jpg" />
-        </q-carousel-slide>
-
-        <q-carousel-slide
-          name="worlMap-vuitton-3"
-          class="column no-wrap flex-center"
-        >
-          <h1 class="mtitle">
-            <q-icon name="fa-regular fa-gem" /> &nbsp; Magasins Gucci
-          </h1>
-          <q-img src="src/assets/6.jpg" />
-        </q-carousel-slide>
-
-        <q-carousel-slide
-          name="worlMap-vuitton-4"
-          class="column no-wrap flex-center"
-        >
-          <h1 class="mtitle">
-            <q-icon name="fa-regular fa-gem" /> &nbsp; Magasins Gucci
-          </h1>
-          <q-img src="src/assets/7.jpg" />
-        </q-carousel-slide>
-
-        <q-carousel-slide name="vuitton" class="column no-wrap flex-center">
-          <h1 class="mtitle">
-            <q-icon name="fa-regular fa-gem" /> &nbsp; Magasins Louis Vuitton
-          </h1>
-          <q-img src="src/assets/8.jpg" />
-        </q-carousel-slide>
-
-        <q-carousel-slide name="vuitton-2" class="column no-wrap flex-center">
-          <h1 class="mtitle">
-            <q-icon name="fa-regular fa-gem" /> &nbsp; Magasins Louis Vuitton
-          </h1>
-          <q-img src="src/assets/9.jpg" />
-        </q-carousel-slide>
-
-        <q-carousel-slide name="vuitton-3" class="column no-wrap flex-center">
-          <h1 class="mtitle">
-            <q-icon name="fa-regular fa-gem" /> &nbsp; Magasins Louis Vuitton
-          </h1>
-          <q-img src="src/assets/10.jpg" />
-        </q-carousel-slide>
-
-        <q-carousel-slide name="partLuxe" class="column no-wrap flex-center">
-          <h1 class="mtitle">
-            <q-icon name="fa-regular fa-gem" />&nbsp;Part de l’Afrique dans le
-            marché mondial du luxe en 2022
-          </h1>
-          <charts-view :data="luxe" cwidth="1000px;"></charts-view>
-        </q-carousel-slide>
-
-        <q-carousel-slide name="moneyE" class="column no-wrap flex-center">
-          <h1 class="mtitle">
+        <q-carousel-slide name="S4" class="column no-wrap flex-center">
+          <h1 style="font-size: 45px; position: relative; top: -60px">
             <q-avatar> </q-avatar>
-            <q-icon name="fa-regular fa-gem" />
-            &nbsp;Part d’exportation de Champagne vers Afrique en 2019
+            <q-icon name="fa-solid fa-graduation-cap" />
+            &nbsp;Perspectives d'emplois 2050
           </h1>
-          <dyn-counter :value="1.8" unit="%" :round="10"></dyn-counter>
+          <dyn-counter
+            :value="26"
+            unit="millions"
+            :round="1"
+            style="margin-bottom: 20px"
+          ></dyn-counter>
+          <p style="font-size: 60px">
+            Dans le secteur de la transition énergétique
+          </p>
+          <p style="font-size: 30px">
+            Selon le rapport de l'Agence internationale des énergies
+            renouvelables de la BAD
+          </p>
         </q-carousel-slide>
 
-        <q-carousel-slide name="licornes4" class="q-mx-auto q-my-4">
-          <h4>
-            <q-icon name="fa-regular fa-gem" /> &nbsp;Nombre de fortunes de plus
-            de 100 000 000 de dollars en Afrique
-          </h4>
-          <charts-view :data="nbrFort" :round="1"></charts-view>
+        <q-carousel-slide name="S5" class="column no-wrap flex-center">
+          <h1 style="font-size: 45px; position: relative">
+            <q-avatar> </q-avatar>
+            <q-icon name="fa-solid fa-graduation-cap" />
+            &nbsp;Le cas du Burkina Faso
+          </h1>
+          <dyn-counter
+            :value="7218"
+            unit="postes créés"
+            :round="1"
+            style="margin-bottom: 20px; margin-top: 20px"
+          ></dyn-counter>
+          <p style="font-size: 120px">pour</p>
+          <b></b>
+          <p style="font-size: 120px">1 969 736 candidats</p>
         </q-carousel-slide>
+
         <q-carousel-slide name="style" class="column no-wrap flex-center">
           <!--HOME-->
-          <main-title :title="ctitle" icon="fa-regular fa-gem"></main-title>
+          <main-title
+            :title="ctitle"
+            icon="fa-solid fa-graduation-cap"
+            class="custom-title"
+          ></main-title>
         </q-carousel-slide>
       </q-carousel>
     </div>
@@ -187,111 +95,26 @@ import ChartsView from 'src/components/ChartsView.vue';
 import { transparentize } from '../consts/Utils';
 import { ctitle } from 'src/consts/title';
 import { QAvatar } from 'quasar';
+import MyLeafletMap from 'src/components/MyLeafletMap.vue';
+import MapView from 'src/components/MapView.vue';
 
 const slide = ref('style');
 
 // Hook pour exécuter une action après le montage du composant
 onMounted(() => {});
 
-const brand = ref({
-  type: 'bar',
-  data: {
-    labels: [
-      'Nike',
-      'Adidas',
-      'Samsung',
-      'Coca Cola',
-      'Apple',
-      'Tecno',
-      'Gucci',
-      'Toyota',
-      'Puma',
-      'MTN',
-      'Zara',
-    ],
-    datasets: [
-      {
-        label: 'Rang de la marque',
-        fill: false,
-        tension: 0.1,
-        backgroundColor: [
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
-          transparentize('red', 0.2),
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
-        ],
-        data: [11, 10.5, 9.5, 9, 8.5, 8, 7, 6, 5, 4, 3],
-      },
-    ],
-  },
-  options: {
-    legend: {
-      display: true,
-      labels: {
-        text: '', // Libellé de la légende
-      },
-    },
-    title: {
-      display: true,
-      text: '%',
-    },
-    scales: {
-      x: {
-        ticks: {
-          display: true, // Masquer les étiquettes de l'axe des abscisses
-        },
-      },
-
-      y: {
-        display: false, // Masquer l'axe des ordonnées
-      },
-    },
-  },
-});
-
-const nbrFort = ref({
-  type: 'bar',
-  data: {
-    labels: ['2020', '2023', '2032'],
-    datasets: [
-      {
-        label: 'Selon le rapport Africa Wealth',
-        fill: false,
-        tension: 0.1,
-        backgroundColor: [
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
-        ],
-        data: [125000, 138000, 195000],
-      },
-    ],
-  },
-  options: {
-    legend: {
-      display: true,
-      labels: {
-        text: '', // Libellé de la légende
-      },
-    },
-    title: {
-      display: true,
-      text: '%',
-    },
-  },
-});
-
-const luxe = ref({
+const RptDiplome = ref({
   type: 'pie',
   data: {
-    labels: ['En Afrique', 'Le reste du monde'],
+    labels: [
+      'Lettres et Sciences Sociales',
+      'Ingénierie et Industries de Transformation',
+      'Filières Agricoles',
+      'Education',
+      'Sciences',
+      'Santé et Protection Sociale',
+      'Service',
+    ],
     datasets: [
       {
         label: 'en % ',
@@ -301,10 +124,15 @@ const luxe = ref({
         tension: 0.1,
         backgroundColor: [
           transparentize('red', 0.2),
+          transparentize('red', 0.2),
+          transparentize('white', 0.2),
+          transparentize('white', 0.2),
+          transparentize('white', 0.2),
+          transparentize('white', 0.2),
           transparentize('white', 0.2),
         ],
 
-        data: [3, 97],
+        data: [56.7, 11.8, 1.9, 15, 8.7, 3.4, 3],
         hoverOffset: 45,
       },
     ],
@@ -315,9 +143,7 @@ const luxe = ref({
     // In this case, we are setting the border of each horizontal bar to be 2px wide
 
     responsive: true,
-    legend: {
-      display: false, //This will do the task
-    },
+
     tooltips: {
       callbacks: {
         label: function (tooltipItem: { yLabel: any }) {
@@ -339,15 +165,17 @@ const luxe = ref({
 
 .test1 {
   font-family: 'Canal', Helvetica, Arial;
-  font-size: 50px;
+  font-size: 120px;
 }
 
 .mtitle {
   font-family: 'Canal', Helvetica, Arial;
-  font-size: 50px;
+  font-size: 30px;
+  text-align: center;
 }
 
 .custom-title {
   font-size: 24px; /* Remplace cette valeur par celle que tu souhaites */
+  text-align: center;
 }
 </style>

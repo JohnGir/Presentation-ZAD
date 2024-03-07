@@ -8,21 +8,21 @@
 var container = {
   value: 0,
 };
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
-  name: "DynCounter",
+  name: 'DynCounter',
 
   methods: {
     visibilityChanged() {
-      console.log("entered");
+      console.log('entered');
       this.currentValue.value = 0;
       this.$nextTick(() => {
         this.$anime({
           targets: this.currentValue,
           round: this.round,
           value: this.value,
-          easing: "linear",
+          easing: 'linear',
         });
       });
     },
@@ -34,10 +34,10 @@ export default defineComponent({
     };
   },
   watch: {
-    value: function(v) {
-      console.log(v)
+    value: function (v) {
+      console.log(v);
       this.visibilityChanged();
-    }
+    },
   },
   mounted() {
     this.visibilityChanged();
@@ -66,13 +66,13 @@ export default defineComponent({
 
 <style scoped>
 @font-face {
-  font-family: "Canal";
-  src: local("Canal"),
-    url(../assets/Canal-DINNextLTPro-BoldCond.ttf) format("truetype");
+  font-family: 'Canal';
+  src: local('Canal'),
+    url(../assets/Canal-DINNextLTPro-BoldCond.ttf) format('truetype');
 }
 
 .test1 {
-  font-family: "Canal", Helvetica, Arial;
+  font-family: 'Canal', Helvetica, Arial;
   font-size: 100px;
 }
 </style>
