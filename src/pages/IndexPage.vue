@@ -14,17 +14,17 @@
         <q-carousel-slide name="style" class="column no-wrap flex-center">
           <!--HOME-->
           <q-avatar></q-avatar>
-          <main-title
-            :title="ctitle"
-            icon="fa-solid fa-syringe"
-            class="custom-tittle"
-          ></main-title>
+          <p style="font-size: 100px; text-align: center">
+            Couverture sanitaire universelle, <br />où en est-on ?
+          </p>
+          <q-icon name="fa-solid fa-syringe" size="10rem"></q-icon>
         </q-carousel-slide>
 
         <q-carousel-slide name="q1" class="column no-wrap flex-center">
           <h1 class="mtitle">
             <q-icon name="fa-solid fa-syringe" /> &nbsp;Depuis 2001, chaque Etat
-            s’engage à allouer à la santé
+            s’engage
+            <p>à allouer à la santé</p>
           </h1>
           <dyn-counter
             :value="15"
@@ -32,7 +32,42 @@
             :round="10"
             style="font-size: 100px"
           ></dyn-counter>
-          />
+          <p style="font-size: 70px">du budget national</p>
+        </q-carousel-slide>
+
+        <!-- <q-carousel-slide name="q6" class="column no-wrap flex-center">
+          <h1 class="mtitle">
+            <q-icon name="fa-solid fa-syringe" /> &nbsp;Budgets nationaux
+            alloués à la santé
+          </h1>
+          <map-view></map-view>
+        </q-carousel-slide> -->
+
+        <q-carousel-slide name="q7" class="column no-wrap flex-center">
+          <h1 class="mtitle">
+            <q-icon name="fa-solid fa-syringe" /> &nbsp;Budgets nationaux
+            alloués à la santé
+          </h1>
+          <map-view></map-view>
+
+          <div class="circles-container">
+            <!-- Pastille rouge pour le Rwanda -->
+            <div class="circle red"></div>
+            <p>Le Rwanda 15%</p>
+
+            <!-- Pastille avec la couleur #c7c583 pour Mali, Namibie et Niger -->
+            <div class="circle" style="background-color: #c7c583"></div>
+            <p>Le Niger 2,3%</p>
+
+            <div class="circle" style="background-color: #c7c583"></div>
+            <p>La Namibie 4,4%</p>
+
+            <div class="circle" style="background-color: #c7c583"></div>
+            <p>Le Mali 1,5%</p>
+
+            <div class="circle" style="background-color: #c7c583"></div>
+            <p>Le Lesotho 6,1%</p>
+          </div>
         </q-carousel-slide>
 
         <q-carousel-slide name="q2" class="column no-wrap flex-center">
@@ -45,7 +80,7 @@
             :value="90"
             unit="%"
             :round="10"
-            style="font-size: 100px"
+            style="font-size: 130px"
           ></dyn-counter>
         </q-carousel-slide>
 
@@ -58,23 +93,22 @@
         </q-carousel-slide>
 
         <q-carousel-slide name="q4" class="column no-wrap flex-center">
-          <h1 class="mtitle">
-            <q-icon name="fa-solid fa-syringe" /> &nbsp;Rapport inégal
+          <h1 class="mtitle" style="position: relative; top: -50px">
+            <q-icon name="fa-solid fa-syringe" /> &nbsp;Des choix à faire
           </h1>
-          <div class="grid-container">
-            <div class="grid-item arrow-up">
-              <q-icon name="fas fa-arrow-up" size="3x" color="green" />
+          <div class="grid-container" style="position: relative; top: -60px">
+            <div class="grid-item arrow-up fade-in">
+              <q-icon name="fas fa-arrow-up" size="6rem" color="green" />
             </div>
-            <div class="grid-item text-up">
-              <q-icon name="fas fa-arrow-down" size="2x" color="red" />
+            <div class="grid-item text-up fade-in">
+              <q-icon name="fas fa-arrow-down" size="6rem" color="red" />
             </div>
-            <div class="grid-item arrow-down">
-              <p style="font-size: 30px">
-                Plus le soin pris en charge est coûteux
-              </p>
+            <div class="grid-item arrow-down fade-in">
+              <p style="font-size: 50px">Plus les soins pris en charge</p>
+              <b style="font-size: 50px">sont coûteux</b>
             </div>
-            <div class="grid-item text-down">
-              <p style="font-size: 30px">Moins la CSU est efficace</p>
+            <div class="grid-item text-down fade-in">
+              <p style="font-size: 50px">Moins la CSU est efficace</p>
             </div>
           </div>
         </q-carousel-slide>
@@ -99,16 +133,67 @@ import { ctitle } from 'src/consts/title';
 import { QAvatar } from 'quasar';
 import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
+import 'chartjs-plugin-annotation';
+import MapView from 'src/components/MapView.vue';
 
 const slide = ref('style');
 
-const cmu = ref({
+const DATA_COUNT = 7;
+
+const labels = ['1444', '1000'];
+
+const datasets = [
+  {
+    label: 'CMU Rwanda',
+    data: [80, 30],
+    backgroundColor: ['rgba(255, 255, 255, 0.8)', 'rgba(255, 255, 255, 0.8)'],
+    borderWidth: 2,
+  },
+  {
+    label: "CMU Côte d'Ivoire",
+    data: [1000, 1444],
+    backgroundColor: ['rgba(255, 0, 0, 0.8)', 'rgba(255, 0, 0, 0.8)'],
+    borderWidth: 2,
+  },
+];
+
+const config = {
   type: 'bar',
   data: {
-    labels: ['Rwanda', "Côte d'Ivoire"],
+    labels: labels,
+    datasets: datasets,
+  },
+  options: {
+    indexAxis: 'y',
+    elements: {
+      bar: {
+        borderWidth: 2,
+      },
+    },
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'right',
+      },
+      title: {
+        display: true,
+        text: "Couverture maladie universelle Rwanda Côte d'ivoire",
+      },
+    },
+    scales: {
+      x: { stacked: true },
+      y: { stacked: true },
+    },
+  },
+};
+
+const cmu1 = ref({
+  type: 'bar',
+  data: {
+    labels: ['30%', '80%'],
     datasets: [
       {
-        label: 'Couverture Maladie Universelle',
+        label: 'Rwanda',
         fill: false,
         tension: 0.1,
         backgroundColor: [
@@ -116,19 +201,8 @@ const cmu = ref({
           transparentize('white', 0.2),
         ],
         borderWidth: 2, // Épaisseur de la ligne
-        yAxisID: 'cmu', // ID de l'axe Y pour la couverture maladie universelle
-        data: [90, 30], // Ajoutez les valeurs de couverture pour le Rwanda et la Côte d'Ivoire
-      },
-      {
-        label: 'Cotisations',
-        fill: false,
-        tension: 0.1,
-        backgroundColor: [
-          transparentize('red', 0.2),
-          transparentize('red', 0.2),
-        ],
-        yAxisID: 'coverage', // ID de l'axe Y pour le taux de couverture
-        data: [1444, 1000], // Ajoutez les valeurs des cotisations pour le Rwanda et la Côte d'Ivoire
+        xAxisID: 'cmu', // ID de l'axe X pour la couverture maladie universelle
+        data: [1000, 1444], // Ajoutez les valeurs de couverture pour le Rwanda et la Côte d'Ivoire
       },
     ],
   },
@@ -144,30 +218,19 @@ const cmu = ref({
       text: '% / Cotisations',
     },
     scales: {
-      y: [
+      x: [
         {
-          id: 'cmu', // ID de l'axe Y pour la couverture maladie universelle
+          id: 'cmu1', // ID de l'axe X pour la couverture maladie universelle
           type: 'linear',
-          position: 'right',
+          position: 'bottom',
           beginAtZero: true,
-          max: 110, // Ajustez en fonction de vos besoins
+          max: 100, // Ajustez en fonction de vos besoins
           ticks: {
             stepSize: 10,
           },
-          callback: (value) => value + '%',
-        },
-        {
-          id: 'coverage', // ID de l'axe Y pour le taux de couverture
-          type: 'linear',
-          position: 'left',
-          beginAtZero: true,
-          max: 2500, // Ajustez en fonction de vos besoins
-          ticks: {
-            stepSize: 200,
-          },
         },
       ],
-      x: {
+      y: {
         beginAtZero: true,
       },
     },
@@ -178,8 +241,8 @@ const cmu = ref({
         align: 'top',
         offset: 8,
         formatter: (value, context) => {
-          if (context.dataset.label === 'Couverture Maladie Universelle') {
-            return value + '%';
+          if (context.dataset.label === 'Rwanda') {
+            return value + 'F';
           }
           return value;
         },
@@ -188,16 +251,13 @@ const cmu = ref({
     tooltips: {
       enabled: false,
       custom: (tooltipModel) => {
-        const dataset = cmu.value.data.datasets[tooltipModel.datasetIndex];
+        const dataset = cmu1.value.data.datasets[tooltipModel.datasetIndex];
         const index = tooltipModel.dataIndex;
         const value = dataset.data[index];
         const label = dataset.label;
 
         // Personnaliser le texte de l'infobulle en fonction du dataset
-        const tooltipText =
-          dataset.label === 'Couverture Maladie Universelle'
-            ? `CMU: ${value}%`
-            : `Cotisations: ${value}`;
+        const tooltipText = `Cotisations: ${value}F`;
 
         const tooltip = document.getElementById('custom-tooltip');
         tooltip.innerHTML = tooltipText;
@@ -207,127 +267,87 @@ const cmu = ref({
   },
 });
 
-const brand = ref({
-  type: 'bar',
+// Créez le graphique
+
+const cmu = ref({
+  type: 'line',
   data: {
-    labels: [
-      'Nike',
-      'Adidas',
-      'Samsung',
-      'Coca Cola',
-      'Apple',
-      'Tecno',
-      'Gucci',
-      'Toyota',
-      'Puma',
-      'MTN',
-      'Zara',
-    ],
+    labels: [''],
     datasets: [
       {
-        label: 'Les marques',
-        fill: false,
-
-        tension: 0.1,
-        backgroundColor: [
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
-          transparentize('red', 0.2),
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
+        label: "Côte d'ivoire",
+        borderColor: 'rgba(255, 255, 255)',
+        data: [
+          { x: 0, y: 1000 },
+          { x: 0.7, y: 1000 },
         ],
-
-        data: [9.7, 9.5, 9, 8.5, 8, 7.5, 7.3, 6.5, 6, 5.5, 5],
+        fill: true, // Activer le remplissage
+        backgroundColor: 'rgba(255, 255, 255)', // Couleur de remplissage
+      },
+      {
+        label: 'Rwanda',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        data: [
+          { x: 0, y: 1444 },
+          { x: 0.9, y: 1444 },
+        ],
+        fill: true, // Activer le remplissage
+        backgroundColor: 'rgba(255, 99, 132, 0.5)', // Couleur de remplissage
+      },
+      {
+        label: 'Vertical 1',
+        borderColor: 'rgba(255, 255, 255)', // Couleur transparente
+        data: [
+          { x: 0.3, y: 0 },
+          { x: 0.3, y: 1000 },
+        ],
+        fill: false,
+        hidden: true, // Masquer le dataset
+      },
+      {
+        label: 'Vertical 2',
+        borderColor: 'rgba(255, 99, 132, 1)', // Couleur transparente
+        data: [
+          { x: 0.9, y: 0 },
+          { x: 0.9, y: 1444 },
+        ],
+        fill: false,
+        hidden: true, // Masquer le dataset
       },
     ],
   },
   options: {
-    legend: {
-      display: true,
-      labels: {
-        text: '', // Libellé de la légende
+    scales: {
+      x: {
+        type: 'linear',
+        position: 'bottom',
+        ticks: {
+          max: 1,
+          callback: (value) => value * 100 + '%',
+        },
+        title: {
+          display: true,
+          text: 'Pourcentage de couverture',
+        },
+      },
+      y: {
+        beginAtZero: true,
+        title: {
+          display: true,
+          text: 'Montant en Fcfa',
+        },
       },
     },
-    title: {
-      display: true,
-      text: '%',
-    },
-  },
-});
-
-const nbrFort = ref({
-  type: 'bar',
-  data: {
-    labels: ['2020', '2023', '2032'],
-    datasets: [
-      {
-        label: '',
-        fill: false,
-        tension: 0.1,
-        backgroundColor: [
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
-          transparentize('white', 0.2),
-        ],
-        data: [125000, 138000, 195000],
-      },
-    ],
-  },
-  options: {
-    legend: {
-      display: true,
-      labels: {
-        text: '', // Libellé de la légende
-      },
-    },
-    title: {
-      display: true,
-      text: '%',
-    },
-  },
-});
-
-const luxe = ref({
-  type: 'pie',
-  data: {
-    labels: ['En Afrique', 'Le reste du monde'],
-    datasets: [
-      {
-        label: 'en % ',
-
-        fill: false,
-
-        tension: 0.1,
-        backgroundColor: [
-          transparentize('red', 0.2),
-          transparentize('white', 0.2),
-        ],
-
-        data: [3, 97],
-        hoverOffset: 45,
-      },
-    ],
-  },
-  options: {
-    indexAxis: 'y',
-    // Elements options apply to all of the options unless overridden in a dataset
-    // In this case, we are setting the border of each horizontal bar to be 2px wide
-
-    responsive: true,
-    legend: {
-      display: false, //This will do the task
-    },
-    tooltips: {
-      callbacks: {
-        label: function (tooltipItem: { yLabel: any }) {
-          console.log(tooltipItem);
-          return tooltipItem.yLabel;
+    plugins: {
+      legend: {
+        display: true,
+        labels: {
+          filter: function (legendItem, chartData) {
+            return (
+              legendItem.text !== 'Vertical 1' &&
+              legendItem.text !== 'Vertical 2'
+            );
+          },
         },
       },
     },
@@ -386,16 +406,55 @@ const luxe = ref({
   flex-direction: column;
   align-items: center;
   transform: translateY(20px);
+  opacity: 0; /* Initial opacity set to 0 */
   transition: opacity 0.5s ease, transform 0.5s ease;
-  /*  animation: rotateIcon 1s ease-in-out; */
 }
 
-@keyframes rotateIcon {
+.fade-in {
+  animation: fade 1s ease-in-out forwards; /* Utilisez une animation de fondu personnalisée */
+}
+
+@keyframes fade {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+/* Délais d'animation pour chaque élément */
+.arrow-up {
+  animation-delay: 0.5s;
+}
+
+.text-up {
+  animation-delay: 1s;
+}
+
+.arrow-down {
+  animation-delay: 1.5s;
+}
+
+.text-down {
+  animation-delay: 2s;
+}
+/* Slide 2 */
+.circles-container {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.red {
+  background-color: red;
 }
 </style>

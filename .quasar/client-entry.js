@@ -53,7 +53,7 @@ console.info('[Quasar] Running SPA.')
 
 
 
-const publicPath = `/luxe/`
+const publicPath = `/sante/`
 
 async function start ({
   app,
