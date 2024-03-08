@@ -13,14 +13,63 @@
       >
         <q-carousel-slide name="style" class="column no-wrap flex-center">
           <!--HOME-->
-          <main-title :title="ctitle" class="custom-title"></main-title>
-          <q-img
-            src="src/assets/icone RSE.webp"
-            style="height: 500px; width: 500px"
-          />
+          <q-avatar></q-avatar>
+          <main-title
+            :title="ctitle"
+            icon="fa-solid fa-hand-holding-dollar"
+            class="custom-title"
+          ></main-title>
         </q-carousel-slide>
 
         <q-carousel-slide name="S2" class="column no-wrap flex-center">
+          <h1 class="mtitle" style="opacity: 0">
+            <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Aliko
+            Dangote
+          </h1>
+          <div class="grid-container">
+            <div class="grid-item content">
+              <q-img
+                src="src/assets/aliko dangote.webp"
+                basic
+                style="
+                  width: 600px;
+                  height: auto;
+                  border: 2px solid white;
+                  border-radius: 10px;
+                "
+              />
+            </div>
+            <p style="font-size: 70px; opacity: 0">
+              $ 1,25 milliards de dollars <b><p>dans la fondation</p></b>
+            </p>
+          </div>
+        </q-carousel-slide>
+
+        <q-carousel-slide name="S10" class="column no-wrap flex-center">
+          <h1 class="mtitle">
+            <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Aliko
+            Dangote
+          </h1>
+          <div class="grid-container">
+            <div class="grid-item content">
+              <q-img
+                src="src/assets/aliko dangote.webp"
+                basic
+                style="
+                  width: 600px;
+                  height: auto;
+                  border: 2px solid white;
+                  border-radius: 10px;
+                "
+              />
+            </div>
+            <p style="font-size: 70px; opacity: 0">
+              $ 1,25 milliards de dollars <b><p>dans la fondation</p></b>
+            </p>
+          </div>
+        </q-carousel-slide>
+
+        <q-carousel-slide name="S9" class="column no-wrap flex-center">
           <h1 class="mtitle">
             <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Aliko
             Dangote
@@ -39,12 +88,28 @@
               />
             </div>
             <p style="font-size: 70px">
-              $ 1,25 milliards de dollars dans la fondation
+              $ 1,25 milliards de dollars <b><p>dans la fondation</p></b>
             </p>
           </div>
         </q-carousel-slide>
 
         <q-carousel-slide name="S3" class="column no-wrap flex-center">
+          <h1 class="mtitle" style="opacity: 0">
+            <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Mo Ibrahim
+          </h1>
+          <q-img
+            src="src/assets/mo ibrahim.jpeg"
+            basic
+            style="
+              width: 450px;
+              height: auto;
+              border: 2px solid white;
+              border-radius: 10px;
+            "
+          />
+        </q-carousel-slide>
+
+        <q-carousel-slide name="S11" class="column no-wrap flex-center">
           <h1 class="mtitle">
             <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Mo Ibrahim
           </h1>
@@ -52,7 +117,7 @@
             src="src/assets/mo ibrahim.jpeg"
             basic
             style="
-              width: 600px;
+              width: 450px;
               height: auto;
               border: 2px solid white;
               border-radius: 10px;
@@ -61,21 +126,54 @@
         </q-carousel-slide>
 
         <q-carousel-slide name="S4" class="column no-wrap flex-center">
-          <h1 class="mtitle">
+          <h1 class="mtitle" style="margin-bottom: 170px">
             <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Les
             philantropes
           </h1>
           <p style="font-size: 45px">
-            Depuis 2014, les philantropes africains ont alloués entre
+            Depuis 2014, les philantropes africains ont alloué entre
           </p>
           <b></b>
-          <p style="font-size: 35px">7 et 10 milliards de dollars</p>
+          <p style="font-size: 100px">7 et 10 milliards de dollars</p>
         </q-carousel-slide>
 
         <q-carousel-slide name="S5" class="column no-wrap flex-center">
-          <h1 class="mtitle">
-            <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp; Tony
-            Elumelu
+          <h1 class="mtitle" style="margin-bottom: 50px; opacity: 0">
+            <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Janine Kacou
+            Diagou
+          </h1>
+          <q-img
+            src="src/assets/Janine Kacou Diagou.jpeg"
+            basic
+            style="
+              width: 350px;
+              height: auto;
+              border: 2px solid white;
+              border-radius: 10px;
+            "
+          />
+        </q-carousel-slide>
+
+        <q-carousel-slide name="S12" class="column no-wrap flex-center">
+          <h1 class="mtitle" style="margin-bottom: 50px">
+            <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Janine Kacou
+            Diagou
+          </h1>
+          <q-img
+            src="src/assets/Janine Kacou Diagou.jpeg"
+            basic
+            style="
+              width: 350px;
+              height: auto;
+              border: 2px solid white;
+              border-radius: 10px;
+            "
+          />
+        </q-carousel-slide>
+
+        <q-carousel-slide name="S6" class="column no-wrap flex-center">
+          <h1 class="mtitle" style="opacity: 0">
+            <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Tony Elumelu
           </h1>
           <q-img
             src="src/assets/tony elumelu.jpeg"
@@ -89,15 +187,15 @@
           />
         </q-carousel-slide>
 
-        <q-carousel-slide name="S6" class="column no-wrap flex-center">
+        <q-carousel-slide name="S13" class="column no-wrap flex-center">
           <h1 class="mtitle">
             <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Tony Elumelu
           </h1>
           <q-img
-            src="src/assets/Tonyfoundation.png"
+            src="src/assets/tony elumelu.jpeg"
             basic
             style="
-              width: 1500px;
+              width: 700px;
               height: auto;
               border: 2px solid white;
               border-radius: 10px;
@@ -107,36 +205,196 @@
 
         <q-carousel-slide name="S7" class="column no-wrap flex-center">
           <h1 class="mtitle">
-            <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Bilan de la
-            fondation Tony Elumelu après 10 ans
+            <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Tony Elumelu
           </h1>
-          <div class="custom-grid-container">
-            <div class="custom-grid-item">
-              <q-icon name="fa-solid fa-coins" size="3em" color="yellow" />
-              <p style="font-size: 35px">Investissement sur le continent</p>
-            </div>
-            <div class="custom-grid-item">
-              <q-icon name="fas fa-dollar-sign" size="3em" color="green" />
-              <p style="font-size: 35px">
-                Avec 100 millions de dollars misés sur le continent
-              </p>
-            </div>
-            <div class="custom-grid-item">
+          <q-img
+            src="src/assets/tony elumelu fondation copie.png"
+            basic
+            style="width: 800px; height: auto"
+          />
+        </q-carousel-slide>
+
+        <q-carousel-slide name="S8" class="column no-wrap flex-center">
+          <h1
+            style="
+              margin-bottom: 70px;
+              position: relative;
+              text-align: center;
+              font-size: 80px;
+              top: -50px;
+            "
+          >
+            <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Bilan de la
+            fondation Tony Elumelu <br />après 10 ans
+          </h1>
+          <div style="display: flex; align-items: center; opacity: 0">
+            <q-icon name="fas fa-dollar-sign" size="3em" color="green" />
+            <p style="font-size: 65px">
+              Avec 100 millions de dollars misés sur le continent
+            </p>
+          </div>
+
+          <div class="custom-grid-container" style="display: flex; opacity: 0">
+            <div
+              class="custom-grid-item"
+              style="display: flex; align-items: center"
+            >
               <q-icon name="fas fa-lightbulb" size="3em" color="yellow" />
-              <p style="font-size: 35px">
+              <p style="font-size: 45px; margin-left: 10px">
                 18,000 projets d'entrepreneurs financés
               </p>
             </div>
-            <div class="custom-grid-item">
+
+            <div
+              class="custom-grid-item"
+              style="display: flex; align-items: center; margin-left: 100px"
+            >
               <q-icon name="fas fa-users" size="3em" />
-              <p style="font-size: 35px">400,000 emplois créés</p>
+              <p style="font-size: 45px; margin-left: 30px">
+                400,000 emplois créés
+              </p>
+            </div>
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide name="S16" class="column no-wrap flex-center">
+          <h1
+            style="
+              margin-bottom: 70px;
+              position: relative;
+              text-align: center;
+              font-size: 80px;
+              top: -50px;
+            "
+          >
+            <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Bilan de la
+            fondation Tony Elumelu <br />après 10 ans
+          </h1>
+          <div style="display: flex; align-items: center">
+            <q-icon name="fas fa-dollar-sign" size="3em" color="green" />
+            <p style="font-size: 65px">
+              Avec 100 millions de dollars misés sur le continent
+            </p>
+          </div>
+
+          <div class="custom-grid-container" style="display: flex; opacity: 0">
+            <div
+              class="custom-grid-item"
+              style="display: flex; align-items: center"
+            >
+              <q-icon name="fas fa-lightbulb" size="3em" color="yellow" />
+              <p style="font-size: 45px; margin-left: 10px">
+                18,000 projets d'entrepreneurs financés
+              </p>
+            </div>
+
+            <div
+              class="custom-grid-item"
+              style="
+                display: flex;
+                align-items: center;
+                margin-left: 100px;
+                opacity: 0;
+              "
+            >
+              <q-icon name="fas fa-users" size="3em" />
+              <p style="font-size: 45px; margin-left: 30px">
+                400,000 emplois créés
+              </p>
+            </div>
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide name="S14" class="column no-wrap flex-center">
+          <h1
+            style="
+              margin-bottom: 70px;
+              position: relative;
+              text-align: center;
+              font-size: 80px;
+              top: -50px;
+            "
+          >
+            <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Bilan de la
+            fondation Tony Elumelu <br />après 10 ans
+          </h1>
+          <div style="display: flex; align-items: center">
+            <q-icon name="fas fa-dollar-sign" size="3em" color="green" />
+            <p style="font-size: 65px">
+              Avec 100 millions de dollars misés sur le continent
+            </p>
+          </div>
+
+          <div class="custom-grid-container" style="display: flex">
+            <div
+              class="custom-grid-item"
+              style="display: flex; align-items: center"
+            >
+              <q-icon name="fas fa-lightbulb" size="3em" color="yellow" />
+              <p style="font-size: 45px; margin-left: 10px">
+                18,000 projets d'entrepreneurs financés
+              </p>
+            </div>
+
+            <div
+              class="custom-grid-item"
+              style="
+                display: flex;
+                align-items: center;
+                margin-left: 100px;
+                opacity: 0;
+              "
+            >
+              <q-icon name="fas fa-users" size="3em" />
+              <p style="font-size: 45px; margin-left: 30px">
+                400,000 emplois créés
+              </p>
+            </div>
+          </div>
+        </q-carousel-slide>
+        <q-carousel-slide name="S15" class="column no-wrap flex-center">
+          <h1
+            style="
+              margin-bottom: 70px;
+              position: relative;
+              text-align: center;
+              font-size: 80px;
+              top: -50px;
+            "
+          >
+            <q-icon name="fa-solid fa-hand-holding-dollar" /> &nbsp;Bilan de la
+            fondation Tony Elumelu <br />après 10 ans
+          </h1>
+          <div style="display: flex; align-items: center">
+            <q-icon name="fas fa-dollar-sign" size="3em" color="green" />
+            <p style="font-size: 65px">
+              Avec 100 millions de dollars misés sur le continent
+            </p>
+          </div>
+
+          <div class="custom-grid-container" style="display: flex">
+            <div
+              class="custom-grid-item"
+              style="display: flex; align-items: center"
+            >
+              <q-icon name="fas fa-lightbulb" size="3em" color="yellow" />
+              <p style="font-size: 45px; margin-left: 10px">
+                18,000 projets d'entrepreneurs financés
+              </p>
+            </div>
+
+            <div
+              class="custom-grid-item"
+              style="display: flex; align-items: center; margin-left: 100px"
+            >
+              <q-icon name="fas fa-users" size="3em" />
+              <p style="font-size: 45px; margin-left: 30px">
+                400,000 emplois créés
+              </p>
             </div>
           </div>
         </q-carousel-slide>
 
         <q-carousel-slide name="style" class="column no-wrap flex-center">
           <!--HOME-->
-          <q-avatar></q-avatar>
           <main-title
             :title="ctitle"
             icon="fa-solid fa-hand-holding-dollar"
@@ -302,12 +560,13 @@ const luxe = ref({
 
 .mtitle {
   font-family: 'Canal', Helvetica, Arial;
+
   font-size: 100px;
   text-align: center;
 }
 
 .custom-title {
-  font-size: 24px; /* Remplace cette valeur par celle que tu souhaites */
+  font-size: 50px; /* Remplace cette valeur par celle que tu souhaites */
 }
 
 /* Slide 2 */
@@ -336,8 +595,8 @@ const luxe = ref({
   gap: 20px; /* Espace entre les cellules */
 }
 
-.custom-grid-item {
-  display: flex;
+/*  .custom-grid-item {
+ display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -351,7 +610,7 @@ const luxe = ref({
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
-}
+} */
 
 .custom-grid-item q-icon {
   margin-bottom: 10px;

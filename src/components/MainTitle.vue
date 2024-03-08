@@ -42,6 +42,6 @@ export default defineComponent({
 
 .mtitle {
   font-family: "Canal", Helvetica, Arial;
-  font-size: 70px;
+  font-size: 100px;
 }
 </style>
