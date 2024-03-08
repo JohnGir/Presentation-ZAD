@@ -28,7 +28,7 @@
           <q-img
             src="src/assets/brieflogosemissionluxe/gucci.png"
             basic
-            style="width: 30%; height: 45%"
+            style="width: 35%; height: 45%"
           />
         </q-carousel-slide>
 
@@ -91,7 +91,7 @@
           <h1 class="mtitle">
             <q-icon name="fa-regular fa-gem" /> &nbsp; Magasins Gucci
           </h1>
-          <q-img src="src/assets/4.jpg" />
+          <q-img src="src/assets/4.jpg" style="width: 800px; height: auto" />
         </q-carousel-slide>
 
         <q-carousel-slide
@@ -101,7 +101,7 @@
           <h1 class="mtitle">
             <q-icon name="fa-regular fa-gem" /> &nbsp; Magasins Gucci
           </h1>
-          <q-img src="src/assets/5.jpg" />
+          <q-img src="src/assets/5.jpg" style="width: 800px; height: auto" />
         </q-carousel-slide>
 
         <q-carousel-slide
@@ -111,7 +111,7 @@
           <h1 class="mtitle">
             <q-icon name="fa-regular fa-gem" /> &nbsp; Magasins Gucci
           </h1>
-          <q-img src="src/assets/6.jpg" />
+          <q-img src="src/assets/6.jpg" style="width: 800px; height: auto" />
         </q-carousel-slide>
 
         <q-carousel-slide
@@ -121,28 +121,28 @@
           <h1 class="mtitle">
             <q-icon name="fa-regular fa-gem" /> &nbsp; Magasins Gucci
           </h1>
-          <q-img src="src/assets/7.jpg" />
+          <q-img src="src/assets/7.jpg" style="width: 800px; height: auto" />
         </q-carousel-slide>
 
         <q-carousel-slide name="vuitton" class="column no-wrap flex-center">
           <h1 class="mtitle">
             <q-icon name="fa-regular fa-gem" /> &nbsp; Magasins Louis Vuitton
           </h1>
-          <q-img src="src/assets/8.jpg" />
+          <q-img src="src/assets/8.jpg" style="width: 800px; height: auto" />
         </q-carousel-slide>
 
         <q-carousel-slide name="vuitton-2" class="column no-wrap flex-center">
           <h1 class="mtitle">
             <q-icon name="fa-regular fa-gem" /> &nbsp; Magasins Louis Vuitton
           </h1>
-          <q-img src="src/assets/9.jpg" />
+          <q-img src="src/assets/9.jpg" style="width: 800px; height: auto" />
         </q-carousel-slide>
 
         <q-carousel-slide name="vuitton-3" class="column no-wrap flex-center">
           <h1 class="mtitle">
             <q-icon name="fa-regular fa-gem" /> &nbsp; Magasins Louis Vuitton
           </h1>
-          <q-img src="src/assets/10.jpg" />
+          <q-img src="src/assets/10.jpg" style="width: 800px; height: auto" />
         </q-carousel-slide>
 
         <q-carousel-slide name="partLuxe" class="column no-wrap flex-center">
@@ -159,11 +159,20 @@
             <q-icon name="fa-regular fa-gem" />
             &nbsp;Part d’exportation de Champagne vers Afrique en 2019
           </h1>
-          <dyn-counter :value="1.8" unit="%" :round="10"></dyn-counter>
+          <dyn-counter
+            :value="1.8"
+            unit="%"
+            :round="10"
+            style="font-size: 100px"
+          ></dyn-counter>
         </q-carousel-slide>
 
-        <q-carousel-slide name="licornes4" class="q-mx-auto q-my-4">
-          <h4>
+        <q-carousel-slide
+          name="licornes4"
+          class="q-mx-auto q-my-4"
+          style="align-items: center"
+        >
+          <h4 style="text-align: center">
             <q-icon name="fa-regular fa-gem" /> &nbsp;Nombre de fortunes de plus
             de 100 000 000 de dollars en Afrique
           </h4>

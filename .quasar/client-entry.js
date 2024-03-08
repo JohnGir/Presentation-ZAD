@@ -48,10 +48,12 @@ import quasarUserOptions from './quasar-user-options.js'
 
 
 
+console.info('[Quasar] Running SPA.')
 
 
 
-const publicPath = ``
+
+const publicPath = `/luxe/`
 
 async function start ({
   app,
