@@ -20,22 +20,104 @@
           ></main-title>
         </q-carousel-slide>
 
+        <q-carousel-slide name="S3" class="column no-wrap flex-center">
+          <h1 style="font-size: 50px; text-align: center">
+            <q-icon name="fa-solid fa-graduation-cap" /> &nbsp;Proportion de
+            diplômés trouvant un emploi
+          </h1>
+          <q-img
+            src="src/assets/Blanc.png"
+            style="width: 900px; height: auto"
+          />
+        </q-carousel-slide>
+
+        <q-carousel-slide name="S4" class="column no-wrap flex-center">
+          <h1 style="font-size: 50px; text-align: center">
+            <q-icon name="fa-solid fa-graduation-cap" /> &nbsp;Proportion de
+            diplômés trouvant un emploi
+          </h1>
+          <q-img src="src/assets/Euro.png" style="width: 900px; height: auto" />
+        </q-carousel-slide>
+
+        <q-carousel-slide name="S5" class="column no-wrap flex-center">
+          <h1 style="font-size: 50px; text-align: center">
+            <q-icon name="fa-solid fa-graduation-cap" /> &nbsp;Proportion de
+            diplômés trouvant un emploi
+          </h1>
+          <q-img src="src/assets/afeu.png" style="width: 900px; height: auto" />
+        </q-carousel-slide>
+
         <q-carousel-slide name="S2" class="column no-wrap flex-center">
-          <h1 style="font-size: 50px">
+          <h1 style="font-size: 75px; text-align: center">
             <q-icon name="fa-solid fa-graduation-cap" /> &nbsp;1,5 millions de
-            diplômés sortis de l’enseignement supérieur en 2023 en Afrique
+            diplômés
+            <p>sortis de l’enseignement supérieur</p>
+            <p>en 2023 en Afrique</p>
           </h1>
         </q-carousel-slide>
 
-        <q-carousel-slide name="S3" class="column no-wrap flex-center">
-          <h1 style="font-size: 45px">
+        <q-carousel-slide name="S6" class="column no-wrap flex-center">
+          <h1 style="font-size: 50px; text-align: center">
             <q-icon name="fa-solid fa-graduation-cap" /> &nbsp;Répartition des
-            diplômés selon le domaine d’études au Burkina Faso en 2020
+            diplômés selon le domaine d’études
+            <p>au Burkina Faso en 2020</p>
           </h1>
           <charts-view :data="RptDiplome" cwidth="1300px"></charts-view>
         </q-carousel-slide>
 
-        <q-carousel-slide name="S4" class="column no-wrap flex-center">
+        <q-carousel-slide name="S9" class="column no-wrap flex-center">
+          <h1
+            class="agnes"
+            style="font-size: 45px; position: relative; opacity: 1"
+          >
+            <q-avatar> </q-avatar>
+            <q-icon name="fa-solid fa-graduation-cap" />
+            &nbsp;Déficit en ingénieurs sur le continent
+          </h1>
+          <dyn-counter
+            :value="4.3"
+            unit="Millions"
+            :round="10"
+            style="margin-bottom: 20px; margin-top: 20px"
+          ></dyn-counter>
+          <p style="font-size: 80px; opacity: 0">Capacité de former</p>
+          <div
+            class="agne2"
+            style="
+              font-size: 120px;
+              display: flex;
+              align-items: baseline;
+              opacity: 0;
+            "
+          >
+            <p style="margin-right: 10px">300 000</p>
+            &nbsp;
+            <p style="font-size: 70px">ingénieurs / an</p>
+          </div>
+        </q-carousel-slide>
+
+        <q-carousel-slide name="S10" class="column no-wrap flex-center">
+          <h1
+            class="agnes"
+            style="font-size: 45px; position: relative; opacity: 1"
+          >
+            <q-avatar> </q-avatar>
+            <q-icon name="fa-solid fa-graduation-cap" />
+            &nbsp;Déficit en ingénieurs sur le continent
+          </h1>
+          <p style="font-size: 115px; margin: -20px">4,3 Millions</p>
+          <p style="font-size: 80px">Capacité de former</p>
+          <div
+            class="agne2"
+            style="font-size: 120px; display: flex; align-items: baseline"
+          >
+            <p style="margin-right: 10px">300 000</p>
+            &nbsp;
+            <p style="font-size: 70px">ingénieurs / an</p>
+          </div>
+        </q-carousel-slide>
+
+        <q-carousel-slide name="S7" class="column no-wrap flex-center">
           <h1 style="font-size: 45px; position: relative; top: -60px">
             <q-avatar> </q-avatar>
             <q-icon name="fa-solid fa-graduation-cap" />
@@ -56,21 +138,31 @@
           </p>
         </q-carousel-slide>
 
-        <q-carousel-slide name="S5" class="column no-wrap flex-center">
-          <h1 style="font-size: 45px; position: relative">
+        <q-carousel-slide name="S8" class="column no-wrap flex-center">
+          <h1
+            style="
+              font-size: 45px;
+              position: relative;
+              opacity: 1;
+              transition: opacity 2s ease-in;
+            "
+          >
             <q-avatar> </q-avatar>
             <q-icon name="fa-solid fa-graduation-cap" />
             &nbsp;Le cas du Burkina Faso
           </h1>
           <dyn-counter
             :value="7218"
-            unit="postes créés"
-            :round="1"
+            unit="postes"
+            :round="10"
             style="margin-bottom: 20px; margin-top: 20px"
           ></dyn-counter>
-          <p style="font-size: 120px">pour</p>
-          <b></b>
-          <p style="font-size: 120px">1 969 736 candidats</p>
+          <p style="font-size: 80px">créés pour</p>
+          <div style="font-size: 120px; display: flex; align-items: baseline">
+            <p style="font-size: 120px">1 969 736</p>
+            &nbsp;
+            <p style="font-size: 70px">candidats</p>
+          </div>
         </q-carousel-slide>
 
         <q-carousel-slide name="style" class="column no-wrap flex-center">
@@ -125,7 +217,7 @@ const RptDiplome = ref({
         backgroundColor: [
           transparentize('red', 0.2),
           transparentize('red', 0.2),
-          transparentize('white', 0.2),
+          transparentize('red', 0.2),
           transparentize('white', 0.2),
           transparentize('white', 0.2),
           transparentize('white', 0.2),
@@ -177,5 +269,25 @@ const RptDiplome = ref({
 .custom-title {
   font-size: 24px; /* Remplace cette valeur par celle que tu souhaites */
   text-align: center;
+}
+
+/* Slide 9 */
+.agnes,
+.agnes2 {
+  opacity: 0;
+  transition: opacity 2s ease-in;
+}
+
+.agnes.active,
+.agnes2.active {
+  opacity: 1;
+}
+
+.agnes {
+  transition-delay: 1s; /* Ajoutez un délai de 1 seconde pour la classe 'agnes' */
+}
+
+.agnes2 {
+  transition-delay: 2s; /* Ajoutez un délai de 2 secondes pour la classe 'agnes2' */
 }
 </style>
